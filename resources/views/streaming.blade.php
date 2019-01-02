@@ -4,19 +4,6 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <!-- <div class="card">
-                <div class="card-header">Dashboard</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    You are logged in!
-                </div>
-            </div> -->
             <div id="player" ></div>
             <script>
                 flowplayer('#player', {
@@ -38,8 +25,6 @@
 @endsection
 
 @section('head')
-
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> -->
 
 <link rel="stylesheet" href="https://releases.flowplayer.org/7.2.7/skin/skin.css">
 <!-- hls.js -->
