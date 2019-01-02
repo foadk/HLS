@@ -25,9 +25,9 @@
                     clip: {
                         sources: [
                             // path to the HLS m3u8
-                            { type: "application/x-mpegurl", src: "http://127.0.0.1:3000/hls/playlist"},
+                            { type: "application/x-mpegurl", src: "http://127.0.0.1:3000/hls/{{ $token }}/playlist"},
                             // path to an optional MP4 fallback, usually not available for live feeds
-                            { type: "video/mp4", src: "example_m3u8/1.ts"}
+                            // { type: "video/mp4", src: "example_m3u8/1.ts"}
                         ]
                     }
                 });
@@ -38,6 +38,8 @@
 @endsection
 
 @section('head')
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> -->
 
 <link rel="stylesheet" href="https://releases.flowplayer.org/7.2.7/skin/skin.css">
 <!-- hls.js -->
