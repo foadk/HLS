@@ -9,7 +9,10 @@ use Illuminate\Support\Facades\Auth;
 class StreamingController extends Controller
 {
     public function streaming() {
-        $token = JWTAuth::fromUser(Auth::user());
+        $token = null;
+        if($user = Auth::user()){
+            $token = JWTAuth::fromUser($user);
+        }
         return view('streaming', ['token' => $token]);
     }
 }
