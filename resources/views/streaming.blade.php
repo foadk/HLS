@@ -12,7 +12,7 @@
                     clip: {
                         sources: [
                             // path to the HLS m3u8
-                            { type: "application/x-mpegurl", src: "http://127.0.0.1:3000/hls/{{ $token }}/playlist"},
+                            { type: "application/x-mpegurl", src: "{{ env('hlsserver') }}/hls/{{ $token }}/playlist"},
                             // path to an optional MP4 fallback, usually not available for live feeds
                             // { type: "video/mp4", src: "example_m3u8/1.ts"}
                         ]
